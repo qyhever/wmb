@@ -151,7 +151,9 @@ const onTabbarClick = row => {
 }
 
 .basic-main {
-  padding-top: 44px;
-  padding-bottom: 48px;
+  padding-top: calc(44px + constant(safe-area-inset-top));
+  padding-top: calc(44px + env(safe-area-inset-top));
+  padding-bottom: calc(48px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(48px + env(safe-area-inset-bottom));
 }
 </style>

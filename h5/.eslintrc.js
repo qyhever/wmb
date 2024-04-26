@@ -26,7 +26,7 @@ module.exports = {
     'vue/multi-word-component-names': 0,
     'vue/max-attributes-per-line': ['error', {
       singleline: {
-        max: 2
+        max: 3
       },
       multiline: {
         max: 1
