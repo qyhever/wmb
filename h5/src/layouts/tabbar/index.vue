@@ -1,7 +1,7 @@
 <template>
-  <div class="navbar">
+  <!-- <div class="navbar">
     {{ activeTabbar.label }}
-  </div>
+  </div> -->
   <div class="basic-main">
     <router-view />
   </div>
@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import { reactive, computed } from 'vue'
+import { reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 defineOptions({
@@ -65,9 +65,9 @@ const state = reactive({
   activeTabbarPath: route.path
 })
 
-const activeTabbar = computed(() => {
-  return state.tabbarList.find(item => item.path === state.activeTabbarPath) || {}
-})
+// const activeTabbar = computed(() => {
+//   return state.tabbarList.find(item => item.path === state.activeTabbarPath) || {}
+// })
 
 const onTabbarClick = row => {
   if (state.activeTabbarPath === row.path) {
@@ -151,8 +151,11 @@ const onTabbarClick = row => {
 }
 
 .basic-main {
-  padding-top: calc(44px + constant(safe-area-inset-top));
-  padding-top: calc(44px + env(safe-area-inset-top));
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // padding-top: calc(44px + constant(safe-area-inset-top));
+  // padding-top: calc(44px + env(safe-area-inset-top));
   padding-bottom: calc(48px + constant(safe-area-inset-bottom));
   padding-bottom: calc(48px + env(safe-area-inset-bottom));
 }
