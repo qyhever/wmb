@@ -3,7 +3,7 @@
   "emmet.triggerExpansionOnTab": true,
   // "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   // json 文件可以写注释
   "files.associations": {
