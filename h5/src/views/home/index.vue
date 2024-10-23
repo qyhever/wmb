@@ -37,6 +37,7 @@ import {
   reactive,
   onMounted
 } from 'vue'
+import Loading from '@/components/loading'
 
 defineOptions({
   name: 'Home'
@@ -84,6 +85,12 @@ const queryShortcutList = () => {
 onMounted(() => {
   querySwipeList()
   queryShortcutList()
+  setTimeout(() => {
+    Loading.open()
+    setTimeout(() => {
+      Loading.close()
+    }, 3000)
+  }, 2000)
 })
 
 </script>

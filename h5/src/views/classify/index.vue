@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 flex flex-col">
+  <div class="flex-1 flex flex-col bg-white">
     <div class="py-[10px] px-[12px]">
       <div class="search-bar">
         <ComSvgIcon name="search" class="text-[18px] text-color-regular" />
